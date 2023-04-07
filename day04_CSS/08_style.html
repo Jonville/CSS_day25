@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+  
+        ul {
+            list-style: none;
+            font-weight: bold;
+
+        }
+        li {
+            width: 120px;
+            display: inline-block;    /*같은 행으로 만들어버림*/
+        }
+        li a{
+            padding: 5px 20px;
+            font-size: 14px;
+            text-decoration: none;
+        }
+        /* a[href="#"] {       /*[] 로 원하는 부분만 설정가능
+            background-color: #ccc;
+            border: 1px solid #eee;
+            font-weight: normal;
+            color: blue;
+
+        } */
+
+        .back {
+            background-color: #eee;
+            border: 1px solid #222;
+        }
+
+        .t_color {
+            color: red;
+
+        }
+
+        a[class ~= "t_color"] {       /* ~ 을 붙히면 2개이상 클래스를 가진친구도 적용됨*/
+            box-shadow: 2px 2px black;
+        }
+        li:not(:last-child){
+            border: 1px solid red;
+        }
+        a:hover {
+            background-color: #ccc;
+        }
+        ul li:nth-of-type(2n+1) {     /* 짝수번째 친구들에만 적용 / +1 붙히면 홀수번째*/
+            background: #ccc;
+            color: black;
+        }
+        fieldset:first-of-type {
+            border-color: red;
+        }
+        fieldset:last-of-type {
+            border: none;
+        }
+    </style>
+
+</head>
+<body>
+    <ul>
+        <li><a>메인메뉴</a></li>
+        <li><a href="javascript:;" class="back t_color">메뉴1</a></li>  <!--여러개 클래스를 가질수잇음-->
+        <li><a href="#" class="t_color">메뉴2</a></li>
+        <li><a href="#" class="back">메뉴3</a></li>
+        <li><a href="#" class="back">메뉴4</a></li>
+    </ul>
+
+    <fieldset></fieldset>
+    <fieldset></fieldset>
+    <fieldset></fieldset>
+
+</body>
+</html>

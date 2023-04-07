@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            width: 500px;
+            height: 300px;
+            /* border: 1px solid black; */
+            border-radius: 40px 40px;
+            margin: 20px;
+
+        }
+
+        .grad {
+            background: linear-gradient(to right bottom, purple, orange); /*특정 위치로 가면서 색깔을 변화시킴*/
+        }
+        .grad2 {
+            background: linear-gradient(45deg , rgb(216, 0, 0), rgb(255, 200, 97)); /* deg 는 각도 (12시 가 기준)*/
+        }
+        .grad3 {
+            background: linear-gradient(to bottom , green, orange 50%, blue); /* 3개이상도 가능*/
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="grad"></div>
+    <div class="grad2"></div>
+    <div class="grad3"></div>
+
+</body>
+</html>

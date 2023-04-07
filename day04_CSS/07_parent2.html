@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+  
+        ul {
+            list-style: none;
+            font-weight: bold;
+        }
+        li {
+            width: 120px;
+            display: inline-block;    /*같은 행으로 만들어버림*/
+        }
+        li a{
+            padding: 5px 20px;
+            font-size: 14px;
+            text-decoration: none;
+        }
+        a[title |= us] {      /* |= 는 us이거나 혹은 us- 로 시작하는애*/
+            background: url(images/us.png) no-repeat left center;
+        }
+        a[title ^= jap] {      /* |= 는 ja이거나 혹은 ja_ 로 시작하는애*/
+            background: url(images/jp.png) no-repeat left center;
+        }
+        a[title ^= chi] {       /* ^= 는 chi 로 시작하는애*/     
+            background: url(images/ch.png) no-repeat left center;
+        }
+        a[href *="www"] {       /* *= 는 www 가 들어가있는애*/     
+            background: rgb(51, 255, 0);
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <ul>
+        <li><a href="https://www.naver.com" >네이버</a></li>
+        <li><a href="#" title="us-eng">영어</a></li>
+        <li><a href="#" title="japan">일본어</a></li>
+        <li><a href="#" title="china">중국어</a></li>
+    </ul>
+
+</body>
+</html>
